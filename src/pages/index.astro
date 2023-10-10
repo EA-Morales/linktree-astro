@@ -5,12 +5,43 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/styles.css';
 
 import avatar from '../images/avatar.webp';
+import github from '../icons/github.svg';
+import linkedin from '../icons/linkedin.svg';
+
+const links = [
+  {
+    icon: github,
+    title: 'Github',
+    href: 'https://github.com/agustinm',
+  },
+  {
+    icon: linkedin,
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/agustinm',
+  },
+];
 ---
 
 <Layout title='Linktree Agustin Morales'>
-  <main class='grid justify-center'>
+  <main class='mx-16 my-32 grid justify-items-center'>
     <Image class='h-24 w-24 rounded-full' src={avatar} alt='Avatar' />
 
     <h1 class='text-center font-bold text-white'>Agustin Morales</h1>
+    <h2 class='text-center text-white'>Frontend Developer</h2>
+    <div class='mt-8 px-6'>
+      <ul class='grid gap-4'>
+        {
+          links.map((link) => (
+            <li class='flex w-full rounded-3xl bg-white px-16 py-2 hover:scale-110'>
+              {' '}
+              <Image class='h-8 w-8' src={link.icon} alt='github' />
+              <a class='' href={link.href}>
+                {link.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </main>
 </Layout>
