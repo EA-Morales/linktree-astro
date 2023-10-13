@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import Github from '../icons/github.astro';
 
 import '../styles/styles.css';
 
@@ -11,11 +12,13 @@ import dots from '../icons/dots.svg';
 
 const links = [
   {
+    component: Github,
     icon: github,
     title: 'Github',
     href: 'https://github.com/agustinm',
   },
   {
+    component: Github,
     icon: linkedin,
     title: 'LinkedIn',
     href: 'https://www.linkedin.com/in/agustinm',
