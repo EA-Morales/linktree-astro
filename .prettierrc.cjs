@@ -8,7 +8,8 @@ module.exports = {
         },
       },
     ],
-    "singleQuote": true,
-    "jsxSingleQuote": true,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true,
     "endOfLine": "auto",
   };
